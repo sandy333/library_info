@@ -1,0 +1,25 @@
+<h1>Listing library_infos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @library_infos.each do |library_info| %>
+  <tr>
+    <td><%= library_info.name %></td>
+    <td><%= library_info.address %></td>
+    <td><%= link_to 'Show', library_info %></td>
+    <td><%= link_to 'Edit', edit_library_info_path(library_info) %></td>
+    <td><%= link_to 'Destroy', library_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Library info', new_library_info_path %>

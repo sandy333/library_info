@@ -1,0 +1,2 @@
+module LibraryInfosHelper
+end
